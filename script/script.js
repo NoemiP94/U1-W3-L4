@@ -18,19 +18,22 @@ const createCells = function (cells) {
 createCells(cells)
 
 //estrazione di un numero random dal bottone
+// evidenziare il numero selezionto dopo il click del bottone
 
 const extract = function () {
   const random = Math.floor(Math.random() * 77) //numero random
-  //collegare random alla cella giusta
+  //collegare random alla cella selezionate
 
-  const selectedNumber = []
-  selectedNumber.push(random)
-
-  selectedNumber.classList.add('selected')
+  //   const selectedCell = document.querySelectorAll('h3')
+  //   selectedCell.forEach(function (h3) {
+  //     if (Number(h3.textContent) === random) {
+  //       selectedCell.classList.add('selected') //aggiunge classe 'selected'
+  //     }
+  //   })
+  return random
 }
-const button = document.getElementById('extraction')
-button.addEventListener('click', extract)
+console.log(extract())
 extract()
 
-// evidenziare il numero selezionto dopo il click del bottone
-//creo array dove inserire i numeri selezionati
+const button = document.getElementById('roll')
+button.addEventListener('click', extract) //aggiunge evento al bottone
