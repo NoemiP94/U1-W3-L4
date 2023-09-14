@@ -19,18 +19,18 @@ createCells(cells)
 
 //estrazione di un numero random dal bottone
 // evidenziare il numero selezionto dopo il click del bottone
+const estratto = []
 
 const extract = function () {
   const random = Math.floor(Math.random() * 77) //numero random
-  const allTheCells = document.querySelectorAll('.cell')
-  allTheCells.forEach((cell) => {
+  estratto.push(random)
+  const all = document.querySelectorAll('.cell')
+  all.forEach((cell) => {
     if (parseInt(cell.innerText) === random) {
       cell.style.backgroundColor = 'yellow'
     }
   })
 }
-console.log(extract())
-extract()
 
 const button = document.getElementById('btn')
 button.addEventListener('click', extract) //aggiunge evento al bottone
