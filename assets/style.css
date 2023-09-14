@@ -12,7 +12,7 @@ h1 {
     font-size: 50px;
 }
 
-#roll {
+#btn {
     border-radius: 15%;
     padding: 1em 3em;
     background-color: rgb(231, 161, 103);
@@ -27,10 +27,4 @@ h1 {
     width: 40px;
     text-align: center;
     background-color: rgba(226, 118, 118, 0.582);
-}
-
-.selected{
-    background-color: rgb(255, 255, 0);
-    border: 2px;
-    font-weight: bold;
 }

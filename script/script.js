@@ -22,18 +22,15 @@ createCells(cells)
 
 const extract = function () {
   const random = Math.floor(Math.random() * 77) //numero random
-  //collegare random alla cella selezionate
-
-  //   const selectedCell = document.querySelectorAll('h3')
-  //   selectedCell.forEach(function (h3) {
-  //     if (Number(h3.textContent) === random) {
-  //       selectedCell.classList.add('selected') //aggiunge classe 'selected'
-  //     }
-  //   })
-  return random
+  const allTheCells = document.querySelectorAll('.cell')
+  allTheCells.forEach((cell) => {
+    if (parseInt(cell.innerText) === random) {
+      cell.style.backgroundColor = 'yellow'
+    }
+  })
 }
 console.log(extract())
 extract()
 
-const button = document.getElementById('roll')
+const button = document.getElementById('btn')
 button.addEventListener('click', extract) //aggiunge evento al bottone
